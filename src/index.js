@@ -8,7 +8,7 @@ import indexRoutes from "./routes/index.js";
 const app = Express();
 
 //settings
-app.set('port', 4000);
+app.set('port', 3000);
 
 //path
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -20,7 +20,8 @@ app.set('views engine', 'ejs');
 //routes
 app.use(indexRoutes);
 
-
+//static file 
+app.use(Express.static(join(__dirname, 'public')))
 
 //escuchando el servidor
 app.listen(app.get('port'), () => {

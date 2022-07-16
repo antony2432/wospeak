@@ -16,4 +16,7 @@ router.get('/main',(req,res)=>{
 router.get('/feed',(req,res)=>{
     res.render('feed.ejs')
 })
+router.get('/prueba',(req,res)=>{
+    res.render('prueba.ejs')
+})
 export default router;
